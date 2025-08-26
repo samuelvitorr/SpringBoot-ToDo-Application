@@ -18,4 +18,4 @@ ENV SPRING_PROFILES_ACTIVE=prod
 EXPOSE 8080
 
 # Comando de inicialização
-CMD ["java", "-jar", "target/seu-projeto.jar"]
+CMD ["sh", "-c", "java $JAVA_OPTS -jar target/*.jar"]
