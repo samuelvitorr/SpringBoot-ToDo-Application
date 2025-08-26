@@ -99,9 +99,14 @@ The project follows the standard Spring Boot structure with clear separation bet
 ## How to Use
 1. Clone the repository.
 2. Set up environment variables in `.env` file
-3. Run `docker-compose up` to start the application
-4. Run the Spring Boot application using `./mvn spring-boot:run`
-5. Access the application at `http://localhost:8080`
+3. Run the Spring Boot application using 
+`#!/bin/bash`
+`set -o allexport`
+`source .env`
+`set +o allexport`
+`mvn spring-boot:run`
+    or use in fish `bash -c "set -o allexport; source .env; set +o allexport; mvn spring-boot:run"`
+4. Access the application at `http://localhost:8080`
 
 <!-- RAINBOW LINE TOP -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
