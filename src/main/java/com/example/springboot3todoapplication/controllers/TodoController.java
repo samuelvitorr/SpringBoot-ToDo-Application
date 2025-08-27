@@ -21,9 +21,6 @@ public class TodoController {
     /**
      * ✅ Endpoint para AVANÇAR o status da tarefa:
      * BACKLOG → DOING → DONE.
-     *
-     * ⚠️ Este método é exclusivo para mudar o status da tarefa.
-     * Não deve ser usado para editar a descrição!
      */
     @PutMapping("/todos/{id}")
     public Todo updateStatus(@PathVariable("id") long id) {
@@ -42,7 +39,6 @@ public class TodoController {
 
     /**
      * ✅ Endpoint EXCLUSIVO para editar a DESCRIÇÃO da tarefa.
-     *
      * ⚠️ Garante que o status da tarefa NÃO será alterado aqui.
      *
      * @param id ID da tarefa a ser editada
