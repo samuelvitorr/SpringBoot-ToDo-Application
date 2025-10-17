@@ -15,7 +15,7 @@ RUN ./mvnw clean package -DskipTests
 ENV SPRING_PROFILES_ACTIVE=prod
 
 # Porta que o container vai expor
-EXPOSE 8080
+    EXPOSE 8080
 
 # Comando de inicialização
-CMD ["sh", "-c", "java $JAVA_OPTS -jar target/*.jar"]
+    CMD ["sh", "-c", "java $JAVA_OPTS -jar target/*.jar"]
